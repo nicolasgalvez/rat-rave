@@ -27,4 +27,11 @@ class HeartbeatController extends Controller
 
         return response()->json($heartbeat, 201);
     }
+    /**
+     * Get all heartbeats.
+     */
+    public function get()
+    {
+        return response()->json(Heartbeat::all());
+    }
 }

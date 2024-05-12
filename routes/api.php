@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post( '/heartbeat', [ HeartbeatController::class, 'store' ] );
+Route::get( '/heartbeat', [ HeartbeatController::class, 'get' ] );
 
 Route::get( '/user', function ( Request $request ) {
     return $request->user();
