@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('heartbeats', function (Blueprint $table) {
             $table->id();
             $table->string('device_id');
-            $table->string('status')->nullable();
+            $table->string('status');
             $table->string('ip_address', 45)->nullable();
             $table->timestamps();
         });
